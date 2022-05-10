@@ -39,18 +39,6 @@ header{
   --corner-shapes: scoop scoop angle angle;
 }
 
-@media (min-width: 700px){
-  header {
-      width: 100%;
-      display: grid;
-      grid-template-columns: auto 500px;
-      justify-content: space-around;
-  }
-  .logo{
-    margin: 0;
-  }
-}
-
 .logo h1,.logo h2, .logo h4{
   margin: 0;
 }
@@ -79,6 +67,23 @@ header{
   align-items: center;
   list-style: none;
   padding: 0;
+}
+
+@media (min-width: 700px){
+  header {
+      width: 100%;
+      display: grid;
+      grid-template-columns: auto 500px;
+      justify-content: space-around;
+  }
+  .logo{
+    margin: 0;
+  }
+  .jump-links{
+    margin: 32px;
+    width: 100%;
+    grid-template-columns: repeat(2, 163px);
+  }
 }
 
 .jump-links li{
