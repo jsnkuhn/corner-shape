@@ -1,0 +1,477 @@
+*{box-sizing: border-box;}
+
+:root{
+  /* https://colorhunt.co/palette/2121213232320d737714ffec */
+  --black-1: #212121;
+  --black-2: #323232;
+  --dark-blue: #0D7377;
+  --highlight: #14FFEC;
+}
+
+a{
+  color: var(--highlight);
+}
+
+.contain{
+  max-width: 1024px;
+  margin-inline: auto;
+  color: #fff;
+  background-color: #212121;
+}
+
+header{
+  padding: 16px;
+  background-image: radial-gradient(rgba(255,255,255,.1), transparent);
+}
+
+.logo{
+  margin: 0 auto 32px;
+  width: max-content;
+  display: grid;
+  gap: 1em;
+  padding: 24px 16px;
+  text-align: center;
+  background-image: paint(cornerShape);
+  --background-color: rgb(0,0,0);
+  --border-color: rgb(255,255,255,.35);
+  --border-width: 1;
+  --corner-sizes: 117px / 24px;
+  --corner-shapes: scoop scoop angle angle;
+}
+
+.logo h1,.logo h2, .logo h4{
+  margin: 0;
+}
+
+.logo h1{
+  display: grid;
+  place-items: center;
+}
+.logo-css,.logo-corner-shape{
+  grid-area: 1/1;
+}
+.logo-css{
+  opacity: .25;
+  font-size: 2.5em;
+}
+.logo-corner-shape{
+  transform: translateY(-5px);
+}
+
+.jump-links{
+  width: 75%;
+  margin-inline: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr) );
+  gap: 16px;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+}
+
+.jump-links li{
+  background-image: paint(cornerShape);
+  --background-color: #000;
+  --border-color: transparent;
+  --border-width: 1;
+  --corner-sizes: 6px;
+}
+
+.jump-links li:hover{
+  background-image: paint(cornerShape);
+  --background-color: var(--highlight);
+  --border-color: transparent;
+  --border-width: 1;
+  --corner-sizes: 6px;
+}
+
+.jump-links a{
+  font-weight: bold;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  text-decoration: none;
+}
+
+.jump-links li:hover a{
+  color: #000;
+}
+
+.category-contain{
+  padding: 16px;
+  margin: 0;
+}
+
+.category-contain:nth-of-type(odd){
+  background-color: #323232;
+}
+
+.examples-contain div{
+  padding: 16px;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+.examples-contain .square{
+  width: 80px;
+  height: 80px;
+}
+
+.grid-3-1{
+  gap: 16px;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-template-rows: repeat(2, auto);
+}
+.row-span-all{
+  grid-row: span 3;
+}
+
+.bordered{
+  box-sizing: border-box;
+  background-image: paint(cornerShape);
+  --background-color: rgb(0,0,0);
+  --border-color: #fff;
+  --border-width: 1;
+  --corner-sizes: 13px; /* accepts 1-8 values */
+  --corner-shapes: angle scoop notch round;
+}
+
+.all-square{
+  --corner-shapes: square;
+}
+.all-notch{
+  --corner-shapes: notch;
+}
+.all-angle{
+  --corner-shapes: angle;
+}
+.all-round{
+  --corner-shapes: round;
+}
+.all-scoop{
+  --corner-shapes: scoop;
+}
+
+/* angle */
+
+.angled{
+  -webkit-mask-image: paint(cornerShape);
+  mask-image: paint(cornerShape);
+  --background-color: rgb(0,0,0);
+  --border-color: #fff;
+  --border-width: 1;
+  --corner-sizes: 0 0 90% 10% / 0 0 70px 42px;
+  --corner-sizes: 13px;
+  --corner-shapes: angle;
+}
+
+.octagon {
+  background-image: paint(cornerShape);
+  --background-color: transparent;
+  --border-color: #fff;
+  --border-width: 2px;
+  --corner-sizes: 16px;
+}
+.example-3 {
+  background-image: paint(cornerShape);
+  --background-color: #d0a85c;
+  --border-color: transparent;
+  --border-width: 0;
+  --corner-sizes: 11px 0; /* accepts 1-8 values */
+  position: relative;
+}
+
+.example-4 {
+  background-color: #11d4f1;
+  position: relative;
+/*   transition: --corner-sizes .5s; */
+}
+.example-4:before{
+  content: '';
+  position: absolute;
+  width: inherit;
+  height: calc(100% + 10px);
+  width: calc(100% + 10px);
+  inset: -5px;
+  background-image: paint(cornerShape);
+  --background-color: transparent;
+  --border-color: #7e9b87;
+  --border-width: 2;
+  --corner-sizes: 20px 0; /* accepts 1-8 values */
+}
+
+.example-4:hover:before{
+  --corner-sizes: 0; /* accepts 1-8 values */
+}
+
+/* @property --corner-sizes {
+  syntax: '<number> | <length>';
+  initial-value: #f00;
+  inherits: false;
+}
+ */
+
+.mario-kart-8{
+  background-image: paint(cornerShape);
+  --background-color: orange;
+  --border-color: #fff;
+  --border-width: 4;
+  --corner-sizes: 40px; /* accepts 1-8 values */
+}
+
+.diamond {
+  width: 80px;
+  height: 80px;
+  background-image: paint(cornerShape);
+  --background-color: #f00;
+  --corner-sizes: 40px; /* accepts 1-8 values */
+}
+.triangle-up {
+  width: 80px;
+  height: 80px;
+  background-image: paint(cornerShape);
+  --background-color: #f00;
+  --corner-sizes: 40px 40px 0 0 / 80px; /* widths / heights */
+}
+
+.triangle-up-right {
+  width: 80px;
+  height: 80px;
+  background-size: cover;
+  background-image: url(https://images.unsplash.com/photo-1647095745855-e4856b150c48?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0ODQyMDIxMQ&ixlib=rb-1.2.1&q=85);
+  -webkit-mask-image: paint(cornerShape);
+  mask-image: paint(cornerShape);
+  --background-color: #f00;
+  --corner-sizes: 0 0 0 80px; /* widths / heights */
+}
+.screen {
+  background-image: paint(cornerShape);
+  --background-color: transparent;
+  --border-color: #fff;
+  animation: rainbow 5s infinite;
+  --border-width: 2;
+  --corner-sizes: 15px / 30px 50px 30px 50px; /* accepts 1-8 values */
+}
+/* @property --border-color {
+  syntax: '<color>';
+  initial-value: #f00;
+  inherits: false;
+}
+
+@keyframes rainbow {
+  from{--border-color: #f00;}
+  33%{--border-color: #0f0;}
+  66%{--border-color: #00f;}
+} */
+.parallelogram {
+  background-image: paint(cornerShape);
+  --background-color: #000;
+  --border-color: transparent;
+  --corner-sizes: 20 / 80px 0; /* accepts 1-8 values */
+}
+
+.trapezoid{
+    background-image: paint(cornerShape);
+  --background-color: #000;
+  --border-color: transparent;
+  --corner-sizes: 20 / 80px 80px 0 0; /* accepts 1-8 values */
+}
+
+/* notched */
+
+.notched{
+  -webkit-mask-image: paint(cornerShape);
+  mask-image: paint(cornerShape);
+  --background-color: rgb(0,0,0);
+  --border-color: #fff;
+  --border-width: 1;
+  --corner-sizes: 13px;
+  --corner-shapes: notch;
+}
+
+.all-notch {
+  background-image: paint(cornerShape);
+  --background-color: #724329;
+  --border-color: #bea459;
+  --border-width: 4;
+  --corner-sizes: 8px; /* accepts 1-8 values */
+  --corner-shapes: notch;
+}
+.all-notch-thin{
+  background-image: paint(cornerShape);
+  --background-color: transparent;
+  --border-color: #fff;
+  --border-width: 2;
+  --corner-sizes: 2px; /* accepts 1-8 values */
+  --corner-shapes: notch;
+}
+.top-right {
+  background-image: paint(cornerShape);
+  --background-color: #000;
+  --border-color: transparent;
+  --border-width: 0;
+  --corner-sizes: 0 8px 0 0; /* accepts 1-8 values */
+  --corner-shapes: square notch square square;
+}
+
+.plus {
+  background-image: paint(cornerShape);
+  --background-color: #000;
+  --border-color: transparent;
+  --border-width: 0;
+  --corner-sizes: 30px; /* accepts 1-8 values */
+  --corner-shapes: notch;
+}
+.paper-mario {
+  background-image: paint(cornerShape);
+  --background-color: #fff;
+  --border-color: #000;
+  --border-width: 3;
+  --corner-sizes: 0 56px 0 112px / 8px; /* accepts 1-8 values */
+  --corner-shapes: notch;
+}
+
+/* scoops */
+
+.scooped{
+  -webkit-mask-image: paint(cornerShape);
+  mask-image: paint(cornerShape);
+  --background-color: rgb(0,0,0);
+  --border-color: #fff;
+  --border-width: 1;
+  --corner-sizes: 13px;
+  --corner-shapes: scoop;
+}
+
+.all-scoop {
+  background-image: paint(cornerShape);
+  --background-color: #283c50;
+  --border-color: #647884;
+  --border-width: 4;
+  --corner-sizes: 16; /* accepts 1-8 values */
+}
+
+.top-right-scoop {
+  background-image: paint(cornerShape);
+  --background-color: rgb(0,0,0,.5);
+  --border-color: #fff;
+  --border-width: 2;
+  --corner-sizes: 0 12px 0 0; /* accepts 1-8 values */
+  --corner-shapes: scoop;
+}
+
+.that-super-ellipse{
+  background-image: paint(cornerShape);
+  --background-color: red;
+  --corner-sizes: 40px; /* accepts 1-8 values */
+}
+.make-room-for-circle{
+  height: 50px;
+    background-image: paint(cornerShape);
+  --background-color: rgb(0,0,0,.5);
+  --border-color: #fff;
+  --border-width: 2;
+  --corner-sizes: 0 50px 0 0; /* accepts 1-8 values */
+}
+
+.make-room-for-circle-2{
+  height: 50px;
+    background-image: paint(cornerShape);
+  --background-color: rgb(0,0,0,.5);
+  --border-color: #fff;
+  --border-width: 2;
+  --corner-sizes: 50 0 0 0; /* accepts 1-8 values */
+}
+
+.scooped-tab{
+  height: 50px;
+    background-image: paint(cornerShape);
+  --background-color: rgb(0,0,0,.5);
+  --border-color: #fff;
+  --border-width: 2;
+  --corner-sizes: 50 50 0 0; /* accepts 1-8 values */
+}
+
+.arrow-down{
+    width: 50px;
+    background-image: paint(cornerShape);
+  --background-color: rgb(0,0,0,.5);
+  --border-color: #fff;
+  --border-width: 2;
+  --corner-sizes: 0 0 40 40 / 0 0 10 10; /* accepts 1-8 values */
+}
+
+.bottom-cut{
+    width: 50px;
+    background-image: paint(cornerShape);
+  --background-color: rgb(0,0,0,.5);
+  --border-color: #fff;
+  --border-width: 2;
+  --corner-sizes: 0 0 80 0 / 0 0 15 0; /* accepts 1-8 values */
+}
+
+/* mixed */
+
+.mixed{
+  -webkit-mask-image: paint(cornerShape);
+  mask-image: paint(cornerShape);
+  --background-color: #000;
+  --corner-shapes: angle square notch round;
+}
+
+.right-arrow{
+  background-image: paint(cornerShape);
+  --background-color: #9acd32;
+  --corner-shapes: round angle angle round; /* accepts square, round, angle, notch, scoop */
+  --corner-sizes: 16px 40px 40px 16px; /* accepts 1-8 values */
+}
+.valorant{
+  background-image: paint(cornerShape);
+  --background-color: #fff;
+  --corner-shapes: square square notch angle;
+  --corner-sizes: 0 0 20px 40px / 0 0 8px 20px; /* accepts 1-8 values */
+}
+.pokemon-unite{
+  background-image: paint(cornerShape);
+  --background-color: #f2f8e7;
+  --border-color: #f6cc73;
+  --border-width: 2;
+  --corner-sizes: 18px; /* accepts 1-8 values */
+  --corner-shapes: square angle round angle;
+}
+.ring-fit{
+  -webkit-mask-image: paint(cornerShape);
+  mask-image: paint(cornerShape);
+  --background-color: ##fdcd0e;
+  --corner-shapes: angle scoop;
+  --corner-sizes: 8px / 40px; /* accepts 1-8 values */
+  background-image: radial-gradient(#fd9f21, #fdcd0e);
+}
+
+.right-arrow-2{
+  background-image: paint(cornerShape);
+  --background-color: #9acd32;
+  --corner-shapes: notch angle angle notch; /* accepts square, round, angle, notch, scoop */
+  --corner-sizes: 158px 40px 40px 158px / 20px 40px 40px 20px; /* accepts 1-8 values */
+}
+
+h2{
+  font-size: 24px;
+}
+
+.examples-contain{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+body{
+  background-color: #0D7377;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
