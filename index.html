@@ -1,1 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A demo of what CSS corner-shape could be/do with the Paint API.">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CSS corner-shape Paint API polyfill</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="contain">
+      <header>
+        <div class="logo">
+          <h1>
+            <span class="logo-css">CSS</span>
+            <span class="logo-corner-shape">corner-shape</span>
+          </h1>
+          <h2>w/ Paint API</h2>
+        </div>
+        <ul class="jump-links">
+          <li class="bordered all-angle"><a href="#angle">Angle</a></li>
+          <li class="bordered all-notch"><a href="#notch">Notch</a></li>
+          <li class="bordered all-scoop"><a href="#scoop">Scoop</a></li>
+          <li class="bordered all-mix"><a href="#mixed">Mixed</a></li>
+          <!-- <li class="bordered all-square"><a href="#square">Square</a></li> -->
+          <!-- <li class="bordered all-round"><a href="#round">Round</a></li> -->
+        </ul>
+      </header>
+      <main>
+        <div id="angle" class="category-contain angled">
+          <div class="grid-3-1">
+            <div class="row-span-all octagon">              
+              <h3>Angled Corners</h3>
+              <h4>What is this?</h4>
+              <p>This page is a demo of what CSS <a href="https://drafts.csswg.org/css-backgrounds-4/#corner-shaping">corner-shape</a> would allow. 
+                It uses the PaintAPI to polyfill the corner shapes as images.</p>
+              <h4>Polygons</h4>
+              <div class="examples-contain">
+                <div class="square diamond"></div>
+                <div class="square triangle-up"></div>
+                <div class="square triangle-up-right"></div>
+                <div class="screen"></div>
+                <div class="parallelogram"></div>
+                <div class="trapezoid"></div>
+              </div>
+            </div>
+            <div class="example-3"></div>
+            <div class="example-4">HOVER ME</div>
+            <div class="mario-kart-8"></div>
+          </div>
+        </div>
+        <div id="notch" class="category-contain notched">
+          <h3>Notched</h3>
+          <h4>Corners</h4>
+          <div class="examples-contain">
+            <div class="all-notch"></div>
+            <div class="all-notch-thin"></div>
+            <div class="top-right"></div>
+          </div>
+          
+          <h3>Shapes</h3>
+          <div class="examples-contain">
+            <div class="square plus"></div>
+            <div class="paper-mario"></div>
+          </div>
+        </div>
+        <div id="scoop" class="category-contain scooped">
+          <h3>Scooped</h3>
 
+          <h4>Corners</h4>
+          <div class="examples-contain">
+            <div class="all-scoop"></div>
+            <div class="top-right-scoop"></div>
+          </div>
+          
+          <h4>Shapes</h4>
+          <div class="examples-contain">
+            <div class="square that-super-ellipse"></div>
+            <div class="make-room-for-circle"></div>
+            <div class="make-room-for-circle-2"></div>
+            <div class="scooped-tab"></div>
+            <div class="square arrow-down"></div>
+            <div class="square bottom-cut"></div>
+          </div>
+        </div>
+        <div id="mixed" class="category-contain mixed">
+          <h3>Mixed</h3>
+          <div class="examples-contain">
+            <div class="right-arrow"></div>
+            <div class="valorant"></div>
+            <div class="pokemon-unite"></div>
+            <div class="ring-fit"></div>
+            <div class="right-arrow-2"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script>
+      CSS.paintWorklet.addModule('script.js');
+    </script>
+  </body>
+</html>
