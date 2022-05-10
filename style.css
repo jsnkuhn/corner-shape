@@ -24,18 +24,6 @@ header{
   background-image: radial-gradient(rgba(255,255,255,.1), transparent);
 }
 
-@media (min-width: 700px){
-  header {
-      width: 100%;
-      display: grid;
-      grid-template-columns: auto 500px;
-      justify-content: space-around;
-  }
-  .logo{
-    margin: 0;
-  }
-}
-
 .logo{
   margin: 0 auto 32px;
   width: max-content;
@@ -49,6 +37,18 @@ header{
   --border-width: 1;
   --corner-sizes: 117px / 24px;
   --corner-shapes: scoop scoop angle angle;
+}
+
+@media (min-width: 700px){
+  header {
+      width: 100%;
+      display: grid;
+      grid-template-columns: auto 500px;
+      justify-content: space-around;
+  }
+  .logo{
+    margin: 0;
+  }
 }
 
 .logo h1,.logo h2, .logo h4{
