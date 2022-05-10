@@ -73,7 +73,7 @@ header{
   header {
       width: 100%;
       display: grid;
-      grid-template-columns: auto 500px;
+      grid-template-columns: auto auto;
       justify-content: space-around;
   }
   .logo{
@@ -82,7 +82,7 @@ header{
   .jump-links{
     margin: 32px;
     width: 100%;
-    grid-template-columns: repeat(2, 163px);
+    grid-template-columns: repeat(2, 180px);
   }
 }
 
