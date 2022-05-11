@@ -88,7 +88,7 @@ header{
 
 .jump-links li{
   background-image: paint(cornerShape);
-  --background-color: #000;
+  --background-color: var(--dark-blue);
   --border-color: transparent;
   --border-width: 1;
   --corner-sizes: 6px;
@@ -453,7 +453,7 @@ header{
   -webkit-mask-image: paint(cornerShape);
   mask-image: paint(cornerShape);
   --background-color: #000;
-  --corner-shapes: angle square notch round;
+  --corner-shapes: square angle round angle;
 }
 
 .right-arrow{
