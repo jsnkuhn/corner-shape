@@ -128,8 +128,8 @@ header{
 
 .examples-contain div{
   padding: 16px;
-  width: 100%;
-  height: 100%;
+  width: 200px;
+  height: 80px;
   justify-content: center;
   align-items: center;
 }
@@ -169,7 +169,7 @@ header{
   --background-color: rgb(0,0,0);
   --border-color: #fff;
   --border-width: 1;
-  --corner-sizes: 13px; /* accepts 1-8 values */
+  --corner-sizes: 16px; /* accepts 1-8 values */
   --corner-shapes: angle scoop notch round;
 }
 
@@ -198,7 +198,7 @@ header{
   --border-color: #fff;
   --border-width: 1;
   --corner-sizes: 0 0 90% 10% / 0 0 70px 42px;
-  --corner-sizes: 13px;
+  --corner-sizes: 16px;
   --corner-shapes: angle;
 }
 
@@ -214,7 +214,7 @@ header{
   --background-color: #d0a85c;
   --border-color: transparent;
   --border-width: 0;
-  --corner-sizes: 11px 0; /* accepts 1-8 values */
+  --corner-sizes: 0 16px; /* accepts 1-8 values */
   position: relative;
 }
 
