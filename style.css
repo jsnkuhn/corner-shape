@@ -81,7 +81,7 @@ header{
   }
   .jump-links{
     margin: 32px;
-    width: 100%;
+    width: auto;
     grid-template-columns: repeat(2, 180px);
   }
 }
@@ -147,6 +147,12 @@ header{
 }
 .row-span-all{
   grid-row: span 3;
+}
+
+.flex-space-around{
+  gap: 16px;
+  display: flex;
+  justify-content: space-around;
 }
 
 .bordered{
