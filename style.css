@@ -35,8 +35,8 @@ header{
   --background-color: rgb(0,0,0);
   --border-color: rgb(255,255,255,.35);
   --border-width: 1;
-  --corner-sizes: 117px / 24px;
-  --corner-shapes: scoop scoop angle angle;
+  --corner-size: 117px / 24px;
+  --corner-shape: scoop scoop angle angle;
 }
 
 .logo h1,.logo h2, .logo h4{
@@ -91,7 +91,7 @@ header{
   --background-color: var(--dark-blue);
   --border-color: transparent;
   --border-width: 1;
-  --corner-sizes: 6px;
+  --corner-size: 6px;
 }
 
 .jump-links li:hover{
@@ -99,7 +99,7 @@ header{
   --background-color: var(--highlight);
   --border-color: transparent;
   --border-width: 1;
-  --corner-sizes: 6px;
+  --corner-size: 6px;
 }
 
 .jump-links a{
@@ -169,24 +169,24 @@ header{
   --background-color: rgb(0,0,0);
   --border-color: #fff;
   --border-width: 1;
-  --corner-sizes: 16px; /* accepts 1-8 values */
-  --corner-shapes: angle scoop notch round;
+  --corner-size: 16px; /* accepts 1-8 values */
+  --corner-shape: angle scoop notch round;
 }
 
 .all-square{
-  --corner-shapes: square;
+  --corner-shape: square;
 }
 .all-notch{
-  --corner-shapes: notch;
+  --corner-shape: notch;
 }
 .all-angle{
-  --corner-shapes: angle;
+  --corner-shape: angle;
 }
 .all-round{
-  --corner-shapes: round;
+  --corner-shape: round;
 }
 .all-scoop{
-  --corner-shapes: scoop;
+  --corner-shape: scoop;
 }
 
 /* angle */
@@ -197,9 +197,9 @@ header{
   --background-color: rgb(0,0,0);
   --border-color: #fff;
   --border-width: 1;
-  --corner-sizes: 0 0 90% 10% / 0 0 70px 42px;
-  --corner-sizes: 16px;
-  --corner-shapes: angle;
+  --corner-size: 0 0 90% 10% / 0 0 70px 42px;
+  --corner-size: 16px;
+  --corner-shape: angle;
 }
 
 .octagon {
@@ -207,21 +207,21 @@ header{
   --background-color: transparent;
   --border-color: #fff;
   --border-width: 2px;
-  --corner-sizes: 16px;
+  --corner-size: 16px;
 }
 .example-3 {
   background-image: paint(cornerShape);
   --background-color: #d0a85c;
   --border-color: transparent;
   --border-width: 0;
-  --corner-sizes: 0 16px; /* accepts 1-8 values */
+  --corner-size: 0 16px; /* accepts 1-8 values */
   position: relative;
 }
 
 .example-4 {
   background-color: #11d4f1;
   position: relative;
-/*   transition: --corner-sizes .5s; */
+/*   transition: --corner-size .5s; */
 }
 .example-4:before{
   content: '';
@@ -234,14 +234,14 @@ header{
   --background-color: transparent;
   --border-color: #7e9b87;
   --border-width: 2;
-  --corner-sizes: 20px 0; /* accepts 1-8 values */
+  --corner-size: 20px 0; /* accepts 1-8 values */
 }
 
 .example-4:hover:before{
-  --corner-sizes: 0; /* accepts 1-8 values */
+  --corner-size: 0; /* accepts 1-8 values */
 }
 
-/* @property --corner-sizes {
+/* @property --corner-size {
   syntax: '<number> | <length>';
   initial-value: #f00;
   inherits: false;
@@ -253,7 +253,7 @@ header{
   --background-color: orange;
   --border-color: #fff;
   --border-width: 4;
-  --corner-sizes: 40px; /* accepts 1-8 values */
+  --corner-size: 40px; /* accepts 1-8 values */
 }
 
 .diamond {
@@ -261,14 +261,14 @@ header{
   height: 80px;
   background-image: paint(cornerShape);
   --background-color: #f00;
-  --corner-sizes: 40px; /* accepts 1-8 values */
+  --corner-size: 40px; /* accepts 1-8 values */
 }
 .triangle-up {
   width: 80px;
   height: 80px;
   background-image: paint(cornerShape);
   --background-color: #f00;
-  --corner-sizes: 40px 40px 0 0 / 80px; /* widths / heights */
+  --corner-size: 40px 40px 0 0 / 80px; /* widths / heights */
 }
 
 .triangle-up-right {
@@ -279,7 +279,7 @@ header{
   -webkit-mask-image: paint(cornerShape);
   mask-image: paint(cornerShape);
   --background-color: #f00;
-  --corner-sizes: 0 0 0 80px; /* widths / heights */
+  --corner-size: 0 0 0 80px; /* widths / heights */
 }
 .screen {
   background-image: paint(cornerShape);
@@ -287,7 +287,7 @@ header{
   --border-color: #fff;
   animation: rainbow 5s infinite;
   --border-width: 2;
-  --corner-sizes: 15px / 30px 50px 30px 50px; /* accepts 1-8 values */
+  --corner-size: 15px / 30px 50px 30px 50px; /* accepts 1-8 values */
 }
 /* @property --border-color {
   syntax: '<color>';
@@ -304,14 +304,14 @@ header{
   background-image: paint(cornerShape);
   --background-color: #000;
   --border-color: transparent;
-  --corner-sizes: 20 / 80px 0; /* accepts 1-8 values */
+  --corner-size: 20 / 80px 0; /* accepts 1-8 values */
 }
 
 .trapezoid{
     background-image: paint(cornerShape);
   --background-color: #000;
   --border-color: transparent;
-  --corner-sizes: 20 / 80px 80px 0 0; /* accepts 1-8 values */
+  --corner-size: 20 / 80px 80px 0 0; /* accepts 1-8 values */
 }
 
 /* notched */
@@ -322,8 +322,8 @@ header{
   --background-color: rgb(0,0,0);
   --border-color: #fff;
   --border-width: 1;
-  --corner-sizes: 13px;
-  --corner-shapes: notch;
+  --corner-size: 13px;
+  --corner-shape: notch;
 }
 
 .all-notch {
@@ -331,24 +331,24 @@ header{
   --background-color: #724329;
   --border-color: #bea459;
   --border-width: 4;
-  --corner-sizes: 8px; /* accepts 1-8 values */
-  --corner-shapes: notch;
+  --corner-size: 8px; /* accepts 1-8 values */
+  --corner-shape: notch;
 }
 .all-notch-thin{
   background-image: paint(cornerShape);
   --background-color: transparent;
   --border-color: #fff;
   --border-width: 2;
-  --corner-sizes: 2px; /* accepts 1-8 values */
-  --corner-shapes: notch;
+  --corner-size: 2px; /* accepts 1-8 values */
+  --corner-shape: notch;
 }
 .top-right {
   background-image: paint(cornerShape);
   --background-color: #000;
   --border-color: transparent;
   --border-width: 0;
-  --corner-sizes: 0 8px 0 0; /* accepts 1-8 values */
-  --corner-shapes: square notch square square;
+  --corner-size: 0 8px 0 0; /* accepts 1-8 values */
+  --corner-shape: square notch square square;
 }
 
 .plus {
@@ -356,16 +356,16 @@ header{
   --background-color: #000;
   --border-color: transparent;
   --border-width: 0;
-  --corner-sizes: 30px; /* accepts 1-8 values */
-  --corner-shapes: notch;
+  --corner-size: 30px; /* accepts 1-8 values */
+  --corner-shape: notch;
 }
 .paper-mario {
   background-image: paint(cornerShape);
   --background-color: #fff;
   --border-color: #000;
   --border-width: 3;
-  --corner-sizes: 0 56px 0 112px / 8px; /* accepts 1-8 values */
-  --corner-shapes: notch;
+  --corner-size: 0 56px 0 112px / 8px; /* accepts 1-8 values */
+  --corner-shape: notch;
 }
 
 /* scoops */
@@ -376,8 +376,8 @@ header{
   --background-color: rgb(0,0,0);
   --border-color: #fff;
   --border-width: 1;
-  --corner-sizes: 13px;
-  --corner-shapes: scoop;
+  --corner-size: 13px;
+  --corner-shape: scoop;
 }
 
 .all-scoop {
@@ -385,7 +385,7 @@ header{
   --background-color: #283c50;
   --border-color: #647884;
   --border-width: 4;
-  --corner-sizes: 16; /* accepts 1-8 values */
+  --corner-size: 16; /* accepts 1-8 values */
 }
 
 .top-right-scoop {
@@ -393,14 +393,14 @@ header{
   --background-color: rgb(0,0,0,.5);
   --border-color: #fff;
   --border-width: 2;
-  --corner-sizes: 0 12px 0 0; /* accepts 1-8 values */
-  --corner-shapes: scoop;
+  --corner-size: 0 12px 0 0; /* accepts 1-8 values */
+  --corner-shape: scoop;
 }
 
 .that-super-ellipse{
   background-image: paint(cornerShape);
   --background-color: red;
-  --corner-sizes: 40px; /* accepts 1-8 values */
+  --corner-size: 40px; /* accepts 1-8 values */
 }
 .make-room-for-circle{
   height: 50px;
@@ -408,7 +408,7 @@ header{
   --background-color: rgb(0,0,0,.5);
   --border-color: #fff;
   --border-width: 2;
-  --corner-sizes: 0 50px 0 0; /* accepts 1-8 values */
+  --corner-size: 0 50px 0 0; /* accepts 1-8 values */
 }
 
 .make-room-for-circle-2{
@@ -417,7 +417,7 @@ header{
   --background-color: rgb(0,0,0,.5);
   --border-color: #fff;
   --border-width: 2;
-  --corner-sizes: 50 0 0 0; /* accepts 1-8 values */
+  --corner-size: 50 0 0 0; /* accepts 1-8 values */
 }
 
 .scooped-tab{
@@ -426,7 +426,7 @@ header{
   --background-color: rgb(0,0,0,.5);
   --border-color: #fff;
   --border-width: 2;
-  --corner-sizes: 50 50 0 0; /* accepts 1-8 values */
+  --corner-size: 50 50 0 0; /* accepts 1-8 values */
 }
 
 .arrow-down{
@@ -435,7 +435,7 @@ header{
   --background-color: rgb(0,0,0,.5);
   --border-color: #fff;
   --border-width: 2;
-  --corner-sizes: 0 0 40 40 / 0 0 10 10; /* accepts 1-8 values */
+  --corner-size: 0 0 40 40 / 0 0 10 10; /* accepts 1-8 values */
 }
 
 .bottom-cut{
@@ -444,7 +444,7 @@ header{
   --background-color: rgb(0,0,0,.5);
   --border-color: #fff;
   --border-width: 2;
-  --corner-sizes: 0 0 80 0 / 0 0 15 0; /* accepts 1-8 values */
+  --corner-size: 0 0 80 0 / 0 0 15 0; /* accepts 1-8 values */
 }
 
 /* mixed */
@@ -453,43 +453,43 @@ header{
   -webkit-mask-image: paint(cornerShape);
   mask-image: paint(cornerShape);
   --background-color: #000;
-  --corner-shapes: square angle round angle;
+  --corner-shape: square angle round angle;
 }
 
 .right-arrow{
   background-image: paint(cornerShape);
   --background-color: #9acd32;
-  --corner-shapes: round angle angle round; /* accepts square, round, angle, notch, scoop */
-  --corner-sizes: 16px 40px 40px 16px; /* accepts 1-8 values */
+  --corner-shape: round angle angle round; /* accepts square, round, angle, notch, scoop */
+  --corner-size: 16px 40px 40px 16px; /* accepts 1-8 values */
 }
 .valorant{
   background-image: paint(cornerShape);
   --background-color: #fff;
-  --corner-shapes: square square notch angle;
-  --corner-sizes: 0 0 20px 40px / 0 0 8px 20px; /* accepts 1-8 values */
+  --corner-shape: square square notch angle;
+  --corner-size: 0 0 20px 40px / 0 0 8px 20px; /* accepts 1-8 values */
 }
 .pokemon-unite{
   background-image: paint(cornerShape);
   --background-color: #f2f8e7;
   --border-color: #f6cc73;
   --border-width: 2;
-  --corner-sizes: 18px; /* accepts 1-8 values */
-  --corner-shapes: square angle round angle;
+  --corner-size: 18px; /* accepts 1-8 values */
+  --corner-shape: square angle round angle;
 }
 .ring-fit{
   -webkit-mask-image: paint(cornerShape);
   mask-image: paint(cornerShape);
   --background-color: ##fdcd0e;
-  --corner-shapes: angle scoop;
-  --corner-sizes: 8px / 40px; /* accepts 1-8 values */
+  --corner-shape: angle scoop;
+  --corner-size: 8px / 40px; /* accepts 1-8 values */
   background-image: radial-gradient(#fd9f21, #fdcd0e);
 }
 
 .right-arrow-2{
   background-image: paint(cornerShape);
   --background-color: #9acd32;
-  --corner-shapes: notch angle angle notch; /* accepts square, round, angle, notch, scoop */
-  --corner-sizes: 158px 40px 40px 158px / 20px 40px 40px 20px; /* accepts 1-8 values */
+  --corner-shape: notch angle angle notch; /* accepts square, round, angle, notch, scoop */
+  --corner-size: 158px 40px 40px 158px / 20px 40px 40px 20px; /* accepts 1-8 values */
 }
 
 h2{

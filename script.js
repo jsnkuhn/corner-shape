@@ -1,16 +1,16 @@
 class cornerShape {
     static get inputProperties() { 
       return [
-        '--corner-shapes',
-        '--corner-sizes', 
+        '--corner-shape',
+        '--corner-size', 
         '--background-color', 
         '--border-width',
         '--border-color'
       ];}
     
     paint(ctx, geom, properties) {
-      var cornerShapes = properties.get('--corner-shapes').toString().trim().split(' ');
-      const cornerSizes = properties.get('--corner-sizes').toString().replace(/px/g, '').trim().split(' ');
+      var cornerShapes = properties.get('--corner-shape').toString().trim().split(' ');
+      const cornerSizes = properties.get('--corner-size').toString().replace(/px/g, '').trim().split(' ');
       const backgroundColor = properties.get('--background-color').toString();
       const borderWidth = properties.get('--border-width').toString().replace(/px/g, '').trim();
       const borderColor = properties.get('--border-color').toString();
