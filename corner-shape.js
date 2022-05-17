@@ -10,7 +10,7 @@ class cornerShape {
     
     paint(ctx, geom, properties) {
       var cornerShapes = properties.get('--corner-shape').toString().trim().split(' ');
-      const cornerSizes = properties.get('--corner-size').toString().replace(/px/g, '').trim().split(' ');
+      const cornerSizes = properties.get('--corner-size').toString().trim().split(' ');
       const backgroundColor = properties.get('--background-color').toString();
       const borderWidth = properties.get('--border-width').toString().replace(/px/g, '').trim();
       const borderColor = properties.get('--border-color').toString();
@@ -45,79 +45,80 @@ class cornerShape {
       shapesSorted[2] = shapeBR;
       shapesSorted[3] = shapeBL;
       
-      let cornerTLW, cornerTLH, cornerTRW, cornerTRH, cornerBRW, cornerBRH, cornerBLW, cornerBLH; 
+      let cornerTLW, cornerTLH, cornerTRW, cornerTRH, cornerBRW, cornerBRH, cornerBLW, cornerBLH;
+      let cornerWidths = [];
+      let cornerHeights = [];
+      
+      if(cornerSizes.includes('/')){
+        var indexToSplit = cornerSizes.indexOf('/');
+        cornerWidths = cornerSizes.slice(0, indexToSplit);
+        cornerHeights = cornerSizes.slice(indexToSplit + 1);
+      }
+      else{
+        cornerWidths = cornerSizes;
+        cornerHeights = cornerSizes;
+      }
+          
+      let computedCornerWidths = cornerWidths.map(item => {
+        if(item.includes('%')){
+          return parseInt(item) / 100 * geom.width
+        }
+        else{
+          return parseInt(item)
+        }
+      })    
   
-      let inputLength = cornerSizes.length;
-      switch (inputLength) {
+      let widthsLength = computedCornerWidths.length;
+      switch (widthsLength) {
         case 1:
-          cornerTLW = cornerTLH = cornerTRW = cornerTRH = cornerBRW = cornerBRH = cornerBLW = cornerBLH = cornerSizes[0];
+          cornerTLW = cornerTRW = cornerBRW = cornerBLW = computedCornerWidths[0];
           break;
         case 4:
-          cornerTLW = cornerTLH = cornerSizes[0];
-          cornerTRW = cornerTRH = cornerSizes[1];
-          cornerBRW = cornerBRH = cornerSizes[2];
-          cornerBLW = cornerBLH = cornerSizes[3];
+          cornerTLW = computedCornerWidths[0];
+          cornerTRW = computedCornerWidths[1];
+          cornerBRW = computedCornerWidths[2];
+          cornerBLW = computedCornerWidths[3];
           break;
         case 3:
-          cornerTLW = cornerTLH = cornerSizes[0];
-          cornerTRW = cornerTRH = cornerBLW = cornerBLH = cornerSizes[1];
-          cornerBRW = cornerBRH = cornerSizes[2];
+          cornerTLW = computedCornerWidths[0];
+          cornerTRW = cornerBLW = computedCornerWidths[1];
+          cornerBRW = computedCornerWidths[2];
           break;
         case 2:
-          cornerTLW = cornerTLH = cornerBRW = cornerBRH = cornerSizes[0];
-          cornerTRW = cornerTRH = cornerBLW = cornerBLH = cornerSizes[1];
+          cornerTLW = cornerBRW = computedCornerWidths[0];
+          cornerTRW = cornerBLW = computedCornerWidths[1];
           break;
       }
       
-      if(cornerSizes.includes('/')){
-        
-        var indexToSplit = cornerSizes.indexOf('/');
-        const cornerWidths = cornerSizes.slice(0, indexToSplit);
-        const cornerHeights = cornerSizes.slice(indexToSplit + 1);
-   
-        let widthsLength = cornerWidths.length;
-        switch (widthsLength) {
-          case 1:
-            cornerTLW = cornerTRW = cornerBRW = cornerBLW = cornerWidths[0];
-            break;
-          case 4:
-            cornerTLW = cornerWidths[0];
-            cornerTRW = cornerWidths[1];
-            cornerBRW = cornerWidths[2];
-            cornerBLW = cornerWidths[3];
-            break;
-          case 3:
-            cornerTLW = cornerWidths[0];
-            cornerTRW = cornerBLW = cornerWidths[1];
-            cornerBRW = cornerWidths[2];
-            break;
-          case 2:
-            cornerTLW = cornerBRW = cornerWidths[0];
-            cornerTRW = cornerBLW = cornerWidths[1];
-            break;
+      let computedCornerHeights = cornerHeights.map(item => {
+        if(item.includes('%')){
+          return parseInt(item) / 100 * geom.height
         }
-          
-        let heightsLength = cornerHeights.length;
-        switch (heightsLength) {
-          case 1:
-            cornerTLH = cornerTRH = cornerBRH = cornerBLH = cornerHeights[0];
-            break;
-          case 4:
-            cornerTLH = cornerHeights[0];
-            cornerTRH = cornerHeights[1];
-            cornerBRH = cornerHeights[2];
-            cornerBLH = cornerHeights[3];
-            break;
-          case 3:
-            cornerTLH = cornerHeights[0];
-            cornerTRH = cornerBLH = cornerHeights[1];
-            cornerBRH = cornerHeights[2];
-            break;
-          case 2:
-            cornerTLH = cornerBRH = cornerHeights[0];
-            cornerTRH = cornerBLH = cornerHeights[1];
-            break;
+        else{
+          return parseInt(item)
         }
+      })
+      
+      let heightsLength = computedCornerHeights.length;
+      switch (heightsLength) {
+        case 1:
+          cornerTLH = cornerTRH = cornerBRH = cornerBLH = computedCornerHeights[0];
+          break;
+        case 4:
+          cornerTLH = computedCornerHeights[0];
+          cornerTRH = computedCornerHeights[1];
+          cornerBRH = computedCornerHeights[2];
+          cornerBLH = computedCornerHeights[3];
+          break;
+        case 3:
+          cornerTLH = computedCornerHeights[0];
+          cornerTRH = cornerBLH = computedCornerHeights[1];
+          cornerBRH = computedCornerHeights[2];
+          break;
+        case 2:
+          cornerTLH = cornerBRH = computedCornerHeights[0];
+          cornerTRH = cornerBLH = computedCornerHeights[1];
+          break;
       }
       
       let p1 = new Path2D();
