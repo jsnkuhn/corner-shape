@@ -253,7 +253,7 @@ header{
   --background-color: orange;
   --border-color: #fff;
   --border-width: 4;
-  --corner-size: 40px 50%; /* accepts 1-8 values */
+  --corner-size: 40px / 50%; /* accepts 1-8 values */
 }
 
 .diamond {
