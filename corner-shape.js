@@ -12,7 +12,8 @@ class cornerShape {
       var cornerShapes = properties.get('--corner-shape').toString().trim().split(' ');
       const cornerSizes = properties.get('--corner-size').toString().trim().split(' ');
       const backgroundColor = properties.get('--background-color').toString();
-      const borderWidth = properties.get('--border-width').value;
+      // const borderWidth = properties.get('--border-width').value;
+      const borderWidth = properties.get('--border-width').toString().replace(/px/g, '').trim();
       const borderColor = properties.get('--border-color').toString();
   
       var shapeTL, shapeTR, shapeBR, shapeBL; 
