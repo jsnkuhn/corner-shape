@@ -99,6 +99,12 @@
     <script src="https://unpkg.com/css-paint-polyfill"></script>
     <script>
       CSS.paintWorklet.addModule('corner-shape.js');
+      CSS.registerProperty({
+        name: `--border-width`,
+        syntax: '<length-percentage> | <number>',
+        inherits: false,
+        initialValue: '0'
+      })
     </script>
   </body>
 </html>
