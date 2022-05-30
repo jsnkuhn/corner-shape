@@ -275,7 +275,7 @@ header{
   width: 80px;
   height: 80px;
   background-size: cover;
-  background-image: url(https://images.unsplash.com/photo-1647095745855-e4856b150c48?crop=entropy&cs=srgb&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0ODQyMDIxMQ&ixlib=rb-1.2.1&q=85);
+  background-image: url(http://placekitten.com/128/128);
   -webkit-mask-image: paint(cornerShape);
   mask-image: paint(cornerShape);
   --background-color: #f00;
