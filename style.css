@@ -275,7 +275,7 @@ header{
   width: 80px;
   height: 80px;
   background-size: cover;
-  background-image: url(http://placekitten.com/128/128);
+  background-image: url(https://placebear.com/320/320);
   -webkit-mask-image: paint(cornerShape);
   mask-image: paint(cornerShape);
   --background-color: #f00;
