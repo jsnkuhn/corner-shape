@@ -318,13 +318,14 @@ header{
 .angled-image-component{
   display: grid;
   grid-template-columns: repeat(2, auto);
+  gap: 24px 96px;
 }
 .angled-image-component .bottom-right{
   background-image: paint(cornerShape);
   --background-color: rgb(0,0,0);
   --border-color: #fff;
   --border-width: 3;
-  --corner-size: 16px;
+  --corner-size: 80px / 100%;
   --corner-shape: none none angle none;
 }
 .angled-image-component .bottom-left{
@@ -332,7 +333,7 @@ header{
   --background-color: rgb(0,0,0);
   --border-color: #fff;
   --border-width: 3;
-  --corner-size: 16px;
+  --corner-size: 80px / 100%;
   --corner-shape: none none none angle;
 }
 .angled-image-component .top-right{
@@ -340,7 +341,7 @@ header{
   --background-color: rgb(0,0,0);
   --border-color: #fff;
   --border-width: 3;
-  --corner-size: 16px;
+  --corner-size: 80px / 100%;
   --corner-shape: none angle none none;
 }
 .angled-image-component .top-left{
@@ -348,7 +349,7 @@ header{
   --background-color: rgb(0,0,0);
   --border-color: #fff;
   --border-width: 3;
-  --corner-size: 16px;
+  --corner-size: 80px / 100%;
   --corner-shape: angle none none none;
 }
 .angled-image-component .hexagon{
@@ -358,7 +359,10 @@ header{
   --border-width: 3;
   --corner-size: 16px;
   --corner-shape: angle;
-  grid-area: span 2 / span 2;
+  grid-row: span 2;
+  grid-column: span 2;
+  justify-self: center;
+  align-self: center;
 }
 
 /* notched */
