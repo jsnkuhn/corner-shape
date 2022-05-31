@@ -329,30 +329,35 @@ header{
 }
 
 .angled-image-component .bottom-right{
-  --corner-shape: none none angle none;
+  --corner-shape: angle none;
   grid-area: 1 / 1;
 }
 .angled-image-component .bottom-left{
-  --corner-shape: none none none angle;
+  --corner-shape: none angle;
   grid-area: 1 / 2;
 }
 .angled-image-component .top-right{
-  --corner-shape: none angle none none;
+  --corner-shape: none angle;
   grid-area: 2 / 1;
 }
 .angled-image-component .top-left{
-  --corner-shape: angle none none none;
+  --corner-shape: angle none;
   grid-area: 2 / 2;
 }
 .angled-image-component .hexagon{
   height: 100%;
-  width: 247px;
-  --corner-size: 93px;
+  width: 226px;
+  --corner-size: 88px;
   --corner-shape: angle;
   grid-area: 1 / 1 / 3 / 3;
   justify-self: center;
   align-self: center;
 }
+
+.button-row{
+  text-align: right;
+}
+
 
 /* notched */
 
