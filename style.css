@@ -145,9 +145,6 @@ header{
   grid-template-columns: 3fr 1fr;
   grid-template-rows: repeat(2, auto);
 }
-.row-span-all{
-  grid-row: span 3;
-}
 
 .flex-space-around{
   gap: 16px;
@@ -355,7 +352,12 @@ header{
 }
 
 .button-row{
-  text-align: right;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.button-row a{
+  color: #fff;
 }
 
 
