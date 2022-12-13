@@ -528,7 +528,7 @@ header{
 .ring-fit{
   -webkit-mask-image: paint(cornerShape);
   mask-image: paint(cornerShape);
-  --background-color: ##fdcd0e;
+  --background-color: #fdcd0e;
   --corner-shape: angle scoop;
   --corner-size: 8px / 50%; /* accepts 1-8 values */
   background-image: radial-gradient(#fd9f21, #fdcd0e);
