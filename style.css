@@ -232,7 +232,7 @@ header{
   --border-color: #7e9b87;
   --border-width: 2px;
   --corner-size: 20px 0; /* accepts 1-8 values */
-  ponter-events: none;
+  pointer-events: none;
 }
 
 .example-4:hover:before{
