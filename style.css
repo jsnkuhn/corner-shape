@@ -357,8 +357,15 @@ header{
   justify-content: space-around;
   align-items: center;
 }
+.button-row li{
+  width: 260px;
+}
+
 .button-row a{
+  text-decoration: none;
   color: #fff;
+  text-align: center;
+  display: block;
 }
 
 
