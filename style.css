@@ -34,7 +34,7 @@ header{
   background-image: paint(cornerShape);
   --background-color: rgb(0,0,0);
   --border-color: rgb(255,255,255,.35);
-  --border-width: 1;
+  --border-width: 1px;
   --corner-size: 50% / 24px;
   --corner-shape: scoop scoop angle angle;
 }
@@ -193,7 +193,7 @@ header{
   mask-image: paint(cornerShape);
   --background-color: rgb(0,0,0);
   --border-color: #fff;
-  --border-width: 1;
+  --border-width: 1px;
   --corner-size: 0 0 90% 10% / 0 0 70px 42px;
   --corner-size: 16px;
   --corner-shape: angle;
@@ -230,8 +230,9 @@ header{
   background-image: paint(cornerShape);
   --background-color: transparent;
   --border-color: #7e9b87;
-  --border-width: 2;
+  --border-width: 2px;
   --corner-size: 20px 0; /* accepts 1-8 values */
+  ponter-events: none;
 }
 
 .example-4:hover:before{
@@ -249,7 +250,7 @@ header{
   background-image: paint(cornerShape);
   --background-color: orange;
   --border-color: #fff;
-  --border-width: 4;
+  --border-width: 4px;
   --corner-size: 40px / 50%; /* accepts 1-8 values */
 }
 
@@ -283,7 +284,7 @@ header{
   --background-color: transparent;
   --border-color: #fff;
   animation: rainbow 5s infinite;
-  --border-width: 2;
+  --border-width: 2px;
   --corner-size: 15px / 30px 50px 30px 50px; /* accepts 1-8 values */
 }
 /* @property --border-color {
@@ -301,14 +302,14 @@ header{
   background-image: paint(cornerShape);
   --background-color: #000;
   --border-color: transparent;
-  --corner-size: 20 / 80px 0; /* accepts 1-8 values */
+  --corner-size: 20px / 80px 0; /* accepts 1-8 values */
 }
 
 .trapezoid{
     background-image: paint(cornerShape);
   --background-color: #000;
   --border-color: transparent;
-  --corner-size: 20 / 80px 80px 0 0; /* accepts 1-8 values */
+  --corner-size: 20px / 80px 80px 0 0; /* accepts 1-8 values */
 }
 
 
@@ -368,7 +369,7 @@ header{
   mask-image: paint(cornerShape);
   --background-color: rgb(0,0,0);
   --border-color: #fff;
-  --border-width: 1;
+  --border-width: 1px;
   --corner-size: 13px;
   --corner-shape: notch;
 }
@@ -377,7 +378,7 @@ header{
   background-image: paint(cornerShape);
   --background-color: #724329;
   --border-color: #bea459;
-  --border-width: 4;
+  --border-width: 4px;
   --corner-size: 8px; /* accepts 1-8 values */
   --corner-shape: notch;
 }
@@ -385,7 +386,7 @@ header{
   background-image: paint(cornerShape);
   --background-color: transparent;
   --border-color: #fff;
-  --border-width: 2;
+  --border-width: 2px;
   --corner-size: 2px; /* accepts 1-8 values */
   --corner-shape: notch;
 }
@@ -402,7 +403,7 @@ header{
   background-image: paint(cornerShape);
   --background-color: #000;
   --border-color: transparent;
-  --border-width: 0;
+  --border-width: 0px;
   --corner-size: 30px; /* accepts 1-8 values */
   --corner-shape: notch;
 }
@@ -422,7 +423,7 @@ header{
   mask-image: paint(cornerShape);
   --background-color: rgb(0,0,0);
   --border-color: #fff;
-  --border-width: 1;
+  --border-width: 1px;
   --corner-size: 13px;
   --corner-shape: scoop;
 }
@@ -431,15 +432,15 @@ header{
   background-image: paint(cornerShape);
   --background-color: #283c50;
   --border-color: #647884;
-  --border-width: 4;
-  --corner-size: 16; /* accepts 1-8 values */
+  --border-width: 4px;
+  --corner-size: 16px; /* accepts 1-8 values */
 }
 
 .top-right-scoop {
   background-image: paint(cornerShape);
   --background-color: rgb(0,0,0,.5);
   --border-color: #fff;
-  --border-width: 2;
+  --border-width: 2px;
   --corner-size: 0 12px 0 0; /* accepts 1-8 values */
   --corner-shape: scoop;
 }
@@ -454,7 +455,7 @@ header{
     background-image: paint(cornerShape);
   --background-color: rgb(0,0,0,.5);
   --border-color: #fff;
-  --border-width: 2;
+  --border-width: 2px;
   --corner-size: 0 50px 0 0; /* accepts 1-8 values */
 }
 
@@ -463,8 +464,8 @@ header{
     background-image: paint(cornerShape);
   --background-color: rgb(0,0,0,.5);
   --border-color: #fff;
-  --border-width: 2;
-  --corner-size: 50 0 0 0; /* accepts 1-8 values */
+  --border-width: 2px;
+  --corner-size: 50px 0 0 0; /* accepts 1-8 values */
 }
 
 .scooped-tab{
@@ -472,8 +473,8 @@ header{
     background-image: paint(cornerShape);
   --background-color: rgb(0,0,0,.5);
   --border-color: #fff;
-  --border-width: 2;
-  --corner-size: 50 50 0 0; /* accepts 1-8 values */
+  --border-width: 2px;
+  --corner-size: 50px 50px 0 0; /* accepts 1-8 values */
 }
 
 .arrow-down{
@@ -481,8 +482,8 @@ header{
     background-image: paint(cornerShape);
   --background-color: rgb(0,0,0,.5);
   --border-color: #fff;
-  --border-width: 2;
-  --corner-size: 0 0 50% 50% / 0 0 10 10; /* accepts 1-8 values */
+  --border-width: 2px;
+  --corner-size: 0 0 50% 50% / 0 0 10px 10px; /* accepts 1-8 values */
 }
 
 .bottom-cut{
@@ -490,8 +491,8 @@ header{
     background-image: paint(cornerShape);
   --background-color: rgb(0,0,0,.5);
   --border-color: #fff;
-  --border-width: 2;
-  --corner-size: 0 0 100% 0 / 0 0 15 0; /* accepts 1-8 values */
+  --border-width: 2px;
+  --corner-size: 0 0 100% 0 / 0 0 15px 0; /* accepts 1-8 values */
 }
 
 /* mixed */
@@ -520,7 +521,7 @@ header{
   background-image: paint(cornerShape);
   --background-color: #f2f8e7;
   --border-color: #f6cc73;
-  --border-width: 2;
+  --border-width: 2px;
   --corner-size: 18px; /* accepts 1-8 values */
   --corner-shape: square angle round angle;
 }
