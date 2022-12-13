@@ -90,7 +90,7 @@ header{
   background-image: paint(cornerShape);
   --background-color: var(--dark-blue);
   --border-color: transparent;
-  --border-width: 1;
+  --border-width: 1px;
   --corner-size: 6px;
 }
 
@@ -98,7 +98,7 @@ header{
   background-image: paint(cornerShape);
   --background-color: var(--highlight);
   --border-color: transparent;
-  --border-width: 1;
+  --border-width: 1px;
   --corner-size: 6px;
 }
 
@@ -165,7 +165,7 @@ header{
   background-image: paint(cornerShape);
   --background-color: rgb(0,0,0);
   --border-color: #fff;
-  --border-width: 1;
+  --border-width: 1px;
   --corner-size: 16px; /* accepts 1-8 values */
   --corner-shape: angle scoop notch round;
 }
