@@ -217,25 +217,16 @@ header{
 
 .example-4 {
   background-color: #11d4f1;
-  position: relative;
-/*   transition: --corner-size .5s; */
-}
-.example-4:before{
-  content: '';
-  position: absolute;
-  width: inherit;
-  height: calc(100% + 10px);
-  width: calc(100% + 10px);
-  inset: -5px;
-  background-image: paint(cornerShape);
+  border: solid 2px;
+  border-image: paint(cornerShape) 20 / 20px / 4px;
   --background-color: transparent;
   --border-color: #7e9b87;
   --border-width: 2px;
-  --corner-size: 20px 0; /* accepts 1-8 values */
-  pointer-events: none;
+  --corner-size: 20px 0;
+/*   transition: --corner-size .5s; */
 }
 
-.example-4:hover:before{
+.example-4:hover{
   --corner-size: 0; /* accepts 1-8 values */
 }
 
