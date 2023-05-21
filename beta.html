@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="A demo of what CSS corner-shape could be/do with the Paint API.">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>BETA</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div class="contain">
+      <header>
+        <div class="logo">
+          <h1>
+            <span class="logo-css">CSS</span>
+            <span class="logo-corner-shape">corner-shape</span>
+          </h1>
+          <h2>w/ Paint API</h2>
+        </div>
+        <ul class="jump-links">
+          <li class="bordered all-angle"><a href="#angle">Angle</a></li>
+          <li class="bordered all-notch"><a href="#notch">Notch</a></li>
+          <li class="bordered all-scoop"><a href="#scoop">Scoop</a></li>
+          <li class="bordered all-mix"><a href="#mixed">Mixed</a></li>
+          <!-- <li class="bordered all-square"><a href="#square">Square</a></li> -->
+          <!-- <li class="bordered all-round"><a href="#round">Round</a></li> -->
+        </ul>
+      </header>
+      <main>
+        <div id="angle" class="category-contain angled">
+          <div class="padding-16 octagon">              
+            <h3>Angled Corners</h3>
+            <h4>What is this?</h4>
+            <p>This page is a demo of how CSS corner-shape might work. 
+              The demo uses the PaintAPI to polyfill the corner shapes as background and mask images.</p>
+            <ul class="button-row">
+              <li class="example-4"><a class="padding-16" href="https://drafts.csswg.org/css-backgrounds-4/#corner-shaping">corner-shape spec</a></li>
+              <li class="example-3"><a class="padding-16" href="https://github.com/jsnkuhn/corner-shape">Git repo</a></li>
+              <li class="mario-kart-8"><a class="padding-16" href="https://github.com/w3c/csswg-drafts/issues/6980">CSSWG use case thread</a></li>
+            </ul>
+            <h4>Polygons from extended corners</h4>
+            <div class="angled-image-component">
+              <img alt="bear" width="302" height="80" src="https://placebear.com/301/80" class="bottom-right">
+              <img alt="bear" width="302" height="80" src="https://placebear.com/299/80" class="bottom-left">
+              <img alt="bear" width="302" height="80" src="https://placebear.com/296/80" class="top-right">
+              <img alt="bear" width="302" height="80" src="https://placebear.com/302/80" class="top-left">
+              <img alt="bear" width="247" height="176" src="https://placebear.com/247/176" class="hexagon">
+            </div>
+            <!-- <div class="examples-contain">
+              <div class="square diamond"></div>
+              <div class="square triangle-up"></div>
+              <div class="square triangle-up-right"></div>
+              <div class="screen"></div>
+              <div class="parallelogram"></div>
+              <div class="trapezoid"></div>
+            </div> -->
+          </div>
+        </div>
+        <div id="notch" class="category-contain notched">
+          <div class="flex-space-around">
+            <div class="flex-1 padding-16 all-notch">
+              <h3>Notched</h3>
+              <h4>Corners</h4>
+            </div>
+            <div class="flex-1 padding-16 all-notch-thin">
+              <h3>Shapes</h3>
+              <div class="examples-contain">
+                <div class="square plus"></div>
+                <div class="paper-mario"></div>
+              </div>
+            </div>
+            <div class="flex-1 padding-16 top-right"></div>
+          </div>
+        </div>
+        <div id="scoop" class="category-contain scooped">
+          <h3>Scooped</h3>
+          <h4>Corners</h4>
+          <div class="examples-contain">
+            <div class="all-scoop"></div>
+            <div class="top-right-scoop"></div>
+          </div>
+          
+          <h4>Shapes</h4>
+          <div class="examples-contain">
+            <div class="square that-super-ellipse"></div>
+            <div class="make-room-for-circle"></div>
+            <div class="make-room-for-circle-2"></div>
+            <div class="scooped-tab"></div>
+            <div class="square arrow-down"></div>
+            <div class="square bottom-cut"></div>
+          </div>
+        </div>
+        <div id="mixed" class="category-contain mixed">
+          <h3>Mixed</h3>
+          <div class="examples-contain">
+            <div class="right-arrow"></div>
+            <div class="valorant"></div>
+            <div class="pokemon-unite"></div>
+            <div class="ring-fit"></div>
+            <div class="right-arrow-2"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="https://unpkg.com/css-paint-polyfill"></script>
+    <script>
+      CSS.paintWorklet.addModule('corner-shape-v2.js');
+      window.CSS.registerProperty({
+          name: '--border-width',
+          syntax: '<length>',
+          inherits: false,
+          initialValue: 0,
+      });
+      window.CSS.registerProperty({
+          name: '--border-color',
+          syntax: '<color>',
+          inherits: false,
+          initialValue: "black",
+      });
+      window.CSS.registerProperty({
+          name: '--background-color',
+          syntax: '<color>',
+          inherits: false,
+          initialValue: "transparent",
+      });
+      // window.CSS.registerProperty({
+      //     name: '--corner-size',
+      //     syntax: '<length-percentage>+',
+      //     inherits: false,
+      //     initialValue: 0,
+      // });
+      // window.CSS.registerProperty({
+      //     name: '--corner-shape',
+      //     syntax: 'none | round | angle | scoop | notch',
+      //     inherits: false,
+      //     initialValue: "none",
+      // });
+    </script>
+  </body>
+</html>
