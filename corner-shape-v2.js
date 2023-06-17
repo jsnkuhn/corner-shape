@@ -1,4 +1,4 @@
-class cornerShape {
+class cornerShapeV2 {
     static get inputProperties() { 
       return [
         '--corner-shape',
@@ -228,4 +228,4 @@ var shapeTL, shapeTR, shapeBR, shapeBL;
       c.stroke(p);
     }
   }
-  registerPaint("cornerShape", cornerShape);
+  registerPaint("cornerShapeV2", cornerShape);
