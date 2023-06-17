@@ -228,4 +228,4 @@ var shapeTL, shapeTR, shapeBR, shapeBL;
       c.stroke(p);
     }
   }
-  registerPaint("cornerShape", cornerShapeV2);
+  registerPaint("borderCornerShape", cornerShapeV2);
