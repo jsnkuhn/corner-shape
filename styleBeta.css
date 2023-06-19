@@ -5,8 +5,20 @@
 }
 
 .corner-shaped-element{
-  height: 250px;
-  aspect-ratio: 16/9;
-  background-image: paint(borderCornerShape);
-  padding: 16px;
+    background-image: paint(borderCornerShape);
+    --corner-shape: angle scoop notch round;
+    --corner-size: 16px;
+    --background-color: #4969c9;
+    --border-color: #000;
+    --border-width: 3px;
+    height: 250px;
+    padding: 16px;
+}
+
+.wide{
+    aspect-ratio: 16/9;
+}
+
+.square{
+    aspect-ratio: 1/1;
 }
