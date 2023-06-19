@@ -1,8 +1,12 @@
 *{box-sizing: border-box;}
 
+*:focus {
+    outline: none;
+}
+
 .corner-shaped-element{
   height: 250px;
   aspect-ratio: 16/9;
   background-image: paint(borderCornerShape);
-  padding: var(--corner-size);
+  padding: 16px;
 }
