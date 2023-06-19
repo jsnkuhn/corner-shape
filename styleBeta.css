@@ -1,7 +1,7 @@
 *{box-sizing: border-box;}
 
 .corner-shaped-element{
-  height: 400px;
+  height: 250px;
   aspect-ratio: 16/9;
   background-image: paint(borderCornerShape);
 }
