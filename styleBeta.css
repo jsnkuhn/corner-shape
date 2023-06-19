@@ -4,4 +4,5 @@
   height: 250px;
   aspect-ratio: 16/9;
   background-image: paint(borderCornerShape);
+  padding: var(--corner-size);
 }
