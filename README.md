@@ -22,6 +22,6 @@ This polyfill attemps to create a more complete implementation of `corner-shape`
   --corner-shape: angle;
   ```
 - FAQ
-- use of the paintAPI polyfill (ie don't blame painAPI itself for poor performance in Firefox/Safari) https://github.com/GoogleChromeLabs/css-paint-polyfill
+- use of the paintAPI polyfill (ie don't blame paintAPI itself for poor performance in Firefox/Safari) https://github.com/GoogleChromeLabs/css-paint-polyfill
 - some times in practice you'd be better off just using an SVG (smaller file size)
 - limitations
